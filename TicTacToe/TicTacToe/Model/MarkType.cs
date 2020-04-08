@@ -14,11 +14,11 @@ namespace TicTacToe.Model
         /// </summary>
         Free,
         /// <summary>
-        /// O
+        /// Tick O
         /// </summary>
         Nought,
         /// <summary>
-        /// X
+        /// Tick X
         /// </summary>
         Cross
 
