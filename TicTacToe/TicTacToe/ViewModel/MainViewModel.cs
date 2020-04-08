@@ -81,15 +81,7 @@ namespace TicTacToe.ViewModel
                 if (p == null)
                     return;
 
-                FreeResults();
-
-                p.Children.Cast<Button>().ToList().ForEach(button =>
-                {
-                    // Change background, foreground and content to default values
-                    button.Content = string.Empty;
-                    button.Background = Brushes.White;
-                    button.Foreground = Brushes.Blue;
-                });
+                FreeResults(p);
 
             });
 
@@ -100,22 +92,13 @@ namespace TicTacToe.ViewModel
         /// </summary>
         private void NewGame(Grid grid)
         {
-            FreeResults();
-
-            // Interate every button on the grid...
-            grid.Children.Cast<Button>().ToList().ForEach(button =>
-            {
-                // Change background, foreground and content to default values
-                button.Content = string.Empty;
-                button.Background = Brushes.White;
-                button.Foreground = Brushes.Blue;
-            });
+            FreeResults(grid);
 
             // Make sure the game hasn't finished
             isGameEnded = false;
         }
 
-        private void FreeResults()
+        private void FreeResults(Grid grid)
         {
             // Create a new blank array of free cells
             results = new MarkType[9];
@@ -125,6 +108,15 @@ namespace TicTacToe.ViewModel
 
             // Make sure Player 1 starts the game
             isPlayer1Turn = true;
+
+            // Interate every button on the grid...
+            grid.Children.Cast<Button>().ToList().ForEach(button =>
+            {
+                // Change background, foreground and content to default values
+                button.Content = string.Empty;
+                button.Background = Brushes.White;
+                button.Foreground = Brushes.Blue;
+            });
         }
 
         /// <summary>
