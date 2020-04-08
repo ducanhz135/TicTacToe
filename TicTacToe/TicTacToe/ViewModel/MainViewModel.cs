@@ -33,12 +33,7 @@ namespace TicTacToe.ViewModel
         {
             TickCommand = new RelayCommand<System.Windows.Controls.Button>((p) => { return true; }, (button) => {
 
-                // Start a new game on the click after it finished
-                if (isGameEnded)
-                {
-                    NewGame(button.Parent as Grid);
-                    return;
-                }
+                
 
                 // Find the buttons position in the array
                 var column = Grid.GetColumn(button);
@@ -72,6 +67,12 @@ namespace TicTacToe.ViewModel
 
                 // Toggle the players turns
                 isPlayer1Turn ^= true;
+
+                // Start a new game on the click after it finished
+                if (isGameEnded)
+                {
+                    NewGame(button.Parent as Grid);
+                }
             });
 
             LoadedWindowCommand = new RelayCommand<Grid>((p) => { return true; }, (p) =>
