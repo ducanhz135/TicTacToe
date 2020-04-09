@@ -45,47 +45,55 @@
                 CommandParameter="{Binding ElementName=Button0_0}"
                 Grid.Column="0"
                 Grid.Row="0"
-                Content="X" />
+                Content="{Binding ButtonContent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         <Button x:Name="Button1_0"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand1}"
                 CommandParameter="{Binding ElementName=Button1_0}"
+                Content="{Binding ButtonContent1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="1"
                 Grid.Row="0"/>
         <Button x:Name="Button2_0"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand2}"
                 CommandParameter="{Binding ElementName=Button2_0}"
+                Content="{Binding ButtonContent2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="2"
                 Grid.Row="0" />
 
         <Button x:Name="Button0_1"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand3}"
                 CommandParameter="{Binding ElementName=Button0_1}"
+                Content="{Binding ButtonContent3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="0"
                 Grid.Row="1" />
         <Button x:Name="Button1_1"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand4}"
                 CommandParameter="{Binding ElementName=Button1_1}"
+                Content="{Binding ButtonContent4, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="1"
                 Grid.Row="1" />
         <Button x:Name="Button2_1"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand5}"
                 CommandParameter="{Binding ElementName=Button2_1}"
+                Content="{Binding ButtonContent5, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="2"
                 Grid.Row="1" />
 
         <Button x:Name="Button0_2"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand6}"
                 CommandParameter="{Binding ElementName=Button0_2}"
+                Content="{Binding ButtonContent6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="0"
                 Grid.Row="2" />
         <Button x:Name="Button1_2"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand7}"
                 CommandParameter="{Binding ElementName=Button1_2}"
+                Content="{Binding ButtonContent7, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="1"
                 Grid.Row="2" />
         <Button x:Name="Button2_2"
-                Command="{Binding TickCommand}"
+                Command="{Binding TickCommand8}"
                 CommandParameter="{Binding ElementName=Button2_2}"
+                Content="{Binding ButtonContent8, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 Grid.Column="2"
                 Grid.Row="2" />
     </Grid>
